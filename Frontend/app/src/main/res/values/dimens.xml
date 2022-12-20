@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_height">109dp</dimen>
+    <dimen name="lobby_height">68dp</dimen>
+    <dimen name="lobby_width">170dp</dimen>
+    <dimen name="join_height">68dp</dimen>
+    <dimen name="join_width">111dp</dimen>
+    <dimen name="spec_height">68dp</dimen>
+    <dimen name="translation">-365dp</dimen>
+    <dimen name="textbox_height">68dp</dimen>
+    <dimen name="textbox_width">170dp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Demo1</string>
+    <string name="Login_button">Login</string>
+    <string name="main_logo_image">Main Logo</string>
+    <string name="settings_button">Settings Button</string>
+    <string name="PlayCreate_game_button">Play/Create Game</string>
+    <string name="homeBackground_image">home background</string>
+    <string name="welcomeBack_image">welcome back!</string>
+    <string name="currentUsername">%name%</string>
+    <string name="currentUser_image">current user:</string>
+    <string name="leaderboard_button">leaderboard button</string>
+    <string name="money_sign_home">money sign</string>
+    <string name="caCYno_home">caCYno name home</string>
+    <string name="apply_button">apply button</string>
+</resources>

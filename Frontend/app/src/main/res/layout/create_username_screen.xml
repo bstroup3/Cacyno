@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="451dp"
+            android:layout_height="858dp" app:srcCompat="@drawable/background" android:id="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+    <EditText
+            android:layout_width="279dp"
+            android:layout_height="66dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/username"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="312dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp" android:hint="username"/>
+    <ImageButton
+            android:layout_width="220dp"
+            android:layout_height="167dp" app:srcCompat="@drawable/apply_button" android:id="@+id/apply_but"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="495dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="86dp"
+            android:layout_marginStart="86dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

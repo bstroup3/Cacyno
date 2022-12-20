@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="109dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageButton
+                    android:layout_width="98dp"
+                    android:layout_height="60dp" app:srcCompat="@drawable/spectate_but"
+                    android:id="@+id/spectate" android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="22dp" android:layout_marginEnd="24dp" android:layout_marginRight="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="68dp" app:srcCompat="@drawable/blank_but"
+                    android:id="@+id/imageView6" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="17dp" android:layout_marginEnd="223dp" android:layout_marginRight="223dp"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            <ImageButton
+                    android:layout_height="60dp" app:srcCompat="@drawable/join_but"
+                    android:id="@+id/join" android:layout_width="98dp" android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="22dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="180dp" android:layout_marginStart="180dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/lobbyname"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6" app:layout_constraintVertical_bias="0.51"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                    app:layout_constraintStart_toStartOf="@+id/imageView6" android:fontFamily="@font/aqua"
+                    android:textColor="@color/lobbytext"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </TableRow>
+</androidx.constraintlayout.widget.ConstraintLayout>

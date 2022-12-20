@@ -1,0 +1,92 @@
+# Example  .gitlab-ci.yml file
+stages:
+  - mavenbuild
+  - maventest
+  - mavenDeploy
+  - androidbuild
+  - androidtest
+
+maven-build:
+  only:
+    refs:
+      - main
+    changes:
+      - Backend/**/*
+  stage: mavenbuild
+  tags:
+    - springboot_tag
+  script:
+    - cd Backend
+    - mvn package -B
+    
+maven-test:
+  only:
+    refs:
+      - main
+    changes:
+      - Backend/**/*
+  stage: maventest
+  tags:
+    - springboot_tag
+  script:
+    - cd Backend
+    - mvn test
+  artifacts:
+    paths:
+      - Backend/target/*.jar
+
+# Below job builds, deploys, executes jar as service.
+autoDeploy:
+  only:
+    refs:
+      - main
+    changes:
+      - Backend/**/*
+  stage: mavenDeploy  #do make a stage with same name!
+  tags:
+   - springboot_tag
+  script:
+    - cd Backend
+    - mvn package
+    - sudo mv target/*.jar /target/web-demo.jar 
+    - sudo systemctl stop system-web-demo
+    - sudo systemctl start system-web-demo
+
+
+android-build:
+  only:
+    refs:
+      - main
+    changes:
+      - Frontend/**/*
+  image: javiersantos/android-ci:latest
+  stage: androidbuild
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  tags:
+   - android_tag
+  script:
+    - cd Frontend/
+    - ./gradlew build
+  artifacts:
+    paths:
+    - Android_test/app/build/outputs/
+
+android-test:
+  only:
+    refs:
+      - main
+    changes:
+      - Frontend/**/*
+  image: javiersantos/android-ci:latest
+  stage: androidtest
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  tags:
+   - android_tag
+  script:
+    - cd Frontend/
+    - ./gradlew test
+

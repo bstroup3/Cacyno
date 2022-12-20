@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:gravity="center"
+                                                   android:background="#62D126"
+                                                   android:id="@+id/lobbyView" tools:ignore="ExtraText">
+
+    <EditText
+            android:layout_width="93dp"
+            android:layout_height="34dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/betInput"
+            android:fontFamily="@font/aqua" android:textSize="12dp"
+            android:paddingBottom="10dp" android:textColor="@color/white" android:hint="enter money"
+            android:textColorHint="@color/white" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="487dp" android:layout_marginStart="487dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="58dp"/>
+    <ImageView
+            android:layout_width="15dp"
+            android:layout_height="20dp" app:srcCompat="@drawable/moneysign" android:id="@+id/betinput_moneySign"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="470dp"
+            android:layout_marginStart="470dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="66dp"/>
+    <ImageView
+            android:layout_width="182dp"
+            android:layout_height="109dp" app:srcCompat="@drawable/winner" android:id="@+id/winnerImage"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            android:adjustViewBounds="false" android:cropToPadding="false" android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="88dp"/>
+    <TextView
+            android:text="JACK"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" android:id="@+id/winner_username"
+            app:layout_constraintStart_toStartOf="@+id/winnerImage"
+            app:layout_constraintEnd_toEndOf="@+id/winnerImage" android:textColor="@color/white"
+            android:fontFamily="@font/aqua" android:textSize="30dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="92dp"/>
+    <ImageView
+            android:layout_width="828dp"
+            android:layout_height="418dp" app:srcCompat="@drawable/game_screen" android:id="@+id/game_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintVertical_bias="0.52"/>
+    <TextView
+            android:text="$0"
+            android:layout_width="49dp"
+            android:layout_height="10dp" android:id="@+id/player3_bet"
+            android:fontFamily="@font/aqua" android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginTop="11dp" app:layout_constraintTop_toBottomOf="@+id/player3_username"
+            app:layout_constraintEnd_toStartOf="@+id/player4_username" android:layout_marginEnd="83dp"
+            android:layout_marginRight="83dp"/>
+    <TextView
+            android:text="$0"
+            android:layout_width="49dp"
+            android:layout_height="10dp" android:id="@+id/player1_bet"
+            android:fontFamily="@font/aqua" android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/player1_card2"
+            android:layout_marginTop="23dp" app:layout_constraintTop_toBottomOf="@+id/player2_username"/>
+    <TextView
+            android:text="$0"
+            android:layout_width="49dp"
+            android:layout_height="10dp" android:id="@+id/player2_bet"
+            android:fontFamily="@font/aqua" android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/player2_username"
+            android:layout_marginLeft="64dp" android:layout_marginStart="64dp"
+            app:layout_constraintStart_toEndOf="@+id/player1_card2"/>
+    <TextView
+            android:text="$0"
+            android:layout_width="49dp"
+            android:layout_height="10dp" android:id="@+id/player4_bet"
+            android:fontFamily="@font/aqua" android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginTop="6dp" app:layout_constraintTop_toBottomOf="@+id/player4_username"
+            app:layout_constraintEnd_toStartOf="@+id/player5_card1" android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"/>
+    <TextView
+            android:text="$0"
+            android:layout_width="49dp"
+            android:layout_height="10dp" android:id="@+id/player5_bet"
+            android:fontFamily="@font/aqua" android:textColor="@color/white"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/player5_card1"
+            android:layout_marginEnd="7dp" android:layout_marginRight="7dp" android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/slider_amount"/>
+    <TextView
+            android:text="$0"
+            android:layout_width="49dp"
+            android:layout_height="10dp" android:id="@+id/your_bet"
+            android:fontFamily="@font/aqua" android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginTop="18dp" app:layout_constraintTop_toBottomOf="@+id/player1_username"
+            app:layout_constraintEnd_toStartOf="@+id/yourCard_1" android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"/>
+    <ImageButton
+            android:layout_width="69dp"
+            android:layout_height="46dp" app:srcCompat="@drawable/backarrow_but" android:id="@+id/back_from_game"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp" android:background="@android:color/transparent"
+            android:scaleType="fitCenter"/>
+    <ImageButton
+            android:layout_width="109dp"
+            android:layout_height="46dp" app:srcCompat="@drawable/raise" android:id="@+id/raise"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="5dp"/>
+    <ImageButton
+            android:layout_width="109dp"
+            android:layout_height="46dp" app:srcCompat="@drawable/fold" android:id="@+id/fold"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            android:layout_marginEnd="116dp" android:layout_marginRight="116dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"/>
+    <ImageButton
+            android:layout_width="109dp"
+            android:layout_height="46dp" app:srcCompat="@drawable/check" android:id="@+id/check"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            android:layout_marginEnd="225dp" android:layout_marginRight="225dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"/>
+    <ImageButton
+            android:layout_width="109dp"
+            android:layout_height="46dp" app:srcCompat="@drawable/call" android:id="@+id/call"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            android:layout_marginEnd="225dp" android:layout_marginRight="225dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"/>
+    <TextView
+            android:text="user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/user_tag"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="82dp"
+            android:layout_marginStart="82dp"/>
+    <TextView
+            android:text=":"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView5"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="17dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="130dp" android:layout_marginStart="130dp"/>
+    <TextView
+            android:text=":"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView9"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" android:layout_marginEnd="122dp" android:layout_marginRight="122dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text=":"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView8"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="82dp" android:layout_marginStart="82dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="9dp"/>
+    <TextView
+            android:text="menoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/username_ingame"
+            android:fontFamily="@font/aqua" android:textSize="20dp"
+            android:textColor="@color/white" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="141dp" android:layout_marginStart="141dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="15dp"/>
+    <TextView
+            android:text="money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/money_tag"
+            android:textColor="@color/white" android:textSize="20dp"
+            android:fontFamily="@font/aqua" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="7dp" android:layout_marginStart="7dp"/>
+    <TextView
+            android:text="420"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/money_ingame"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="108dp"
+            android:layout_marginStart="108dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"/>
+    <TextView
+            android:text="450"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player1_money"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintStart_toStartOf="@+id/player1_line"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="104dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/player1_line"/>
+    <TextView
+            android:text="manny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player1_username"
+            android:fontFamily="@font/aqua" android:textSize="18dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/player1_line"
+            android:layout_marginLeft="11dp" android:layout_marginStart="11dp" android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp" app:layout_constraintEnd_toEndOf="@+id/player1_line"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="80dp"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player1_card1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="47dp" android:layout_marginStart="47dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="131dp"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player1_card2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="100dp" android:layout_marginStart="100dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="131dp"/>
+    <ImageView
+            android:layout_width="16dp"
+            android:layout_height="21dp" app:srcCompat="@drawable/moneysign" android:id="@+id/player1_moneysign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="44dp" android:layout_marginStart="44dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="104dp"/>
+    <ImageView
+            android:layout_width="88dp"
+            android:layout_height="7dp" app:srcCompat="@drawable/line" android:id="@+id/player1_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="98dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="61dp" android:layout_marginStart="61dp"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player2_card2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="52dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="212dp" android:layout_marginStart="212dp"/>
+    <TextView
+            android:text="jack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player2_username"
+            android:fontFamily="@font/aqua" android:textSize="18dp"
+            android:textColor="@color/white" app:layout_constraintStart_toStartOf="@+id/player2_line"
+            android:layout_marginLeft="24dp" android:layout_marginStart="24dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="160dp" android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp" app:layout_constraintEnd_toEndOf="@+id/player2_line"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player2_card1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="52dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="160dp" android:layout_marginStart="160dp"/>
+    <ImageView
+            android:layout_width="88dp"
+            android:layout_height="7dp" app:srcCompat="@drawable/line" android:id="@+id/player2_line"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="152dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="176dp" android:layout_marginStart="176dp"/>
+    <ImageView
+            android:layout_width="16dp"
+            android:layout_height="21dp" app:srcCompat="@drawable/moneysign" android:id="@+id/player2_moneysign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="160dp" android:layout_marginStart="160dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="236dp"/>
+    <TextView
+            android:text="500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player2_money"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintStart_toStartOf="@+id/player2_line"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="240dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/player2_line"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player3_card2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp" android:layout_marginEnd="357dp" android:layout_marginRight="357dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="800"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player3_money"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintStart_toStartOf="@+id/player3_line"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="276dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/player3_line"/>
+    <TextView
+            android:text="ben"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player3_username"
+            android:fontFamily="@font/aqua" android:textSize="18dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="128dp"
+            app:layout_constraintStart_toStartOf="@+id/player3_line" android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp" android:layout_marginEnd="23dp" android:layout_marginRight="23dp"
+            app:layout_constraintEnd_toEndOf="@+id/player3_line" app:layout_constraintHorizontal_bias="0.333"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player3_card1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="336dp" android:layout_marginStart="336dp"/>
+    <ImageView
+            android:layout_width="88dp"
+            android:layout_height="7dp" app:srcCompat="@drawable/line" android:id="@+id/player3_line"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="117dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="350dp" android:layout_marginStart="350dp"/>
+    <ImageView
+            android:layout_width="16dp"
+            android:layout_height="21dp" app:srcCompat="@drawable/moneysign" android:id="@+id/player3_moneysign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="336dp" android:layout_marginStart="336dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="276dp"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player4_card2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="48dp" android:layout_marginEnd="184dp" android:layout_marginRight="184dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="88dp"
+            android:layout_height="7dp" app:srcCompat="@drawable/line" android:id="@+id/player4_line"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="152dp" android:layout_marginEnd="196dp" android:layout_marginRight="196dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="caden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player4_username"
+            android:fontFamily="@font/aqua" android:textSize="18dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="160dp"
+            app:layout_constraintStart_toStartOf="@+id/player4_line" android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp" android:layout_marginEnd="29dp" android:layout_marginRight="29dp"
+            app:layout_constraintEnd_toEndOf="@+id/player4_line" app:layout_constraintHorizontal_bias="0.583"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player4_card1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="48dp" android:layout_marginEnd="236dp" android:layout_marginRight="236dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="16dp"
+            android:layout_height="21dp" app:srcCompat="@drawable/moneysign" android:id="@+id/player4_moneysign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="504dp" android:layout_marginStart="504dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="240dp"/>
+    <TextView
+            android:text="700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player4_money"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintStart_toStartOf="@+id/player4_line"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="240dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/player4_line"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player5_card2"
+            android:layout_marginEnd="55dp" android:layout_marginRight="55dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="131dp"/>
+    <TextView
+            android:text="750"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player5_money"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintStart_toStartOf="@+id/player5_line"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="104dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/player5_line"/>
+    <TextView
+            android:text="doodlebob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/player5_username"
+            android:fontFamily="@font/aqua" android:textSize="18dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="300dp"
+            app:layout_constraintStart_toStartOf="@+id/player5_line"
+            app:layout_constraintEnd_toEndOf="@+id/player5_line"/>
+    <ImageView
+            android:layout_width="61dp"
+            android:layout_height="76dp" app:srcCompat="@drawable/backcard" android:id="@+id/player5_card1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="131dp" android:layout_marginEnd="108dp" android:layout_marginRight="108dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="16dp"
+            android:layout_height="21dp" app:srcCompat="@drawable/moneysign" android:id="@+id/player5_moneysign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="636dp" android:layout_marginStart="636dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="104dp"/>
+    <ImageView
+            android:layout_width="16dp"
+            android:layout_height="21dp" app:srcCompat="@drawable/moneysign" android:id="@+id/slider_moneysign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="560dp" android:layout_marginStart="560dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="93dp"/>
+    <ImageView
+            android:layout_width="88dp"
+            android:layout_height="7dp" app:srcCompat="@drawable/line" android:id="@+id/player5_line"
+            android:layout_marginEnd="67dp" android:layout_marginRight="67dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="98dp"/>
+    <ImageView
+            android:layout_width="145dp"
+            android:layout_height="155dp" app:srcCompat="@drawable/backcard" android:id="@+id/yourCard_1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="300dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="215dp" android:layout_marginStart="215dp"/>
+    <ImageView
+            android:layout_width="59dp"
+            android:layout_height="75dp" app:srcCompat="@drawable/backcard" android:id="@+id/middlecard_1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="204dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="244dp" android:layout_marginStart="244dp"/>
+    <ImageView
+            android:layout_width="59dp"
+            android:layout_height="75dp" app:srcCompat="@drawable/backcard" android:id="@+id/middlecard_2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="204dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="300dp" android:layout_marginStart="300dp"/>
+    <ImageView
+            android:layout_width="59dp"
+            android:layout_height="75dp" app:srcCompat="@drawable/backcard" android:id="@+id/middlecard_3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="204dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="356dp" android:layout_marginStart="356dp"/>
+    <ImageView
+            android:layout_width="59dp"
+            android:layout_height="75dp" app:srcCompat="@drawable/backcard" android:id="@+id/middlecard_4"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="204dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="412dp" android:layout_marginStart="412dp"/>
+    <ImageView
+            android:layout_width="59dp"
+            android:layout_height="75dp" app:srcCompat="@drawable/backcard" android:id="@+id/middlecard_5"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="204dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="468dp" android:layout_marginStart="468dp"/>
+    <ImageView
+            android:layout_width="145dp"
+            android:layout_height="155dp" app:srcCompat="@drawable/backcard" android:id="@+id/yourCard_2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="300dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="319dp"
+            android:layout_marginStart="319dp"/>
+    <ImageView
+            android:layout_width="22dp"
+            android:layout_height="24dp" app:srcCompat="@drawable/moneysign" android:id="@+id/your_money_sign"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="86dp" android:layout_marginStart="86dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="5dp"/>
+    <TextView
+            android:text="pot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/pot_tag"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" android:layout_marginEnd="127dp" android:layout_marginRight="127dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"/>
+    <TextView
+            android:text="2500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/pot"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" android:gravity="center_vertical" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="63dp" android:layout_marginRight="63dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/slider_amount"
+            android:textColor="@color/white" android:fontFamily="@font/aqua"
+            android:textSize="20dp" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="579dp"
+            android:layout_marginStart="579dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="91dp"/>
+    <ImageButton
+            android:layout_width="53dp"
+            android:layout_height="42dp" app:srcCompat="@drawable/chat_but" android:id="@+id/chat_but"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="74dp"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="19dp" app:srcCompat="@drawable/green_dot" android:id="@+id/player1_greendot"
+            android:scaleType="fitCenter" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="264dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="156dp" android:layout_marginStart="156dp"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="19dp" app:srcCompat="@drawable/green_dot" android:id="@+id/player2_greendot"
+            android:scaleType="fitCenter" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="152dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="272dp" android:layout_marginStart="272dp"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="19dp" app:srcCompat="@drawable/green_dot" android:id="@+id/player3_greendot"
+            android:scaleType="fitCenter" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="116dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="420dp" android:layout_marginStart="420dp"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="19dp" app:srcCompat="@drawable/green_dot" android:id="@+id/player4_greendot"
+            android:scaleType="fitCenter" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="152dp"
+            android:layout_marginEnd="170dp" android:layout_marginRight="170dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="19dp" app:srcCompat="@drawable/green_dot" android:id="@+id/player5_greendot"
+            android:scaleType="fitCenter" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="260dp"
+            android:layout_marginEnd="40dp" android:layout_marginRight="40dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="19dp" app:srcCompat="@drawable/green_dot" android:id="@+id/your_greendot"
+            android:scaleType="fitCenter" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="344dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="156dp"
+            android:layout_marginStart="156dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

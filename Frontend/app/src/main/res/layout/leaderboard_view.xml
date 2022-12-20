@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="443dp"
+            android:layout_height="830dp" app:srcCompat="@drawable/background" android:id="@+id/lb_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="leaderboard"
+            android:layout_width="341dp"
+            android:layout_height="75dp" android:id="@+id/textView10"
+            android:fontFamily="@font/aqua" android:textColor="@color/white"
+            android:textSize="50dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="56dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"/>
+    <ScrollView
+            android:layout_width="391dp"
+            android:layout_height="597dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="6dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:id="@+id/leaderboard_linear">
+        </LinearLayout>
+    </ScrollView>
+    <ImageButton
+            android:layout_width="84dp"
+            android:layout_height="53dp" app:srcCompat="@drawable/backarrow_but" android:id="@+id/lb_back"
+            android:background="@android:color/transparent" android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
